@@ -266,3 +266,17 @@ div {
     width: 100%;
     max-width: 500px; /* Ajusta automaticamente para telas menores */
 }
+
+button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #6B4F3F; /* Marrom ajustado */
+    color: #D3C7B7; /* Cinza claro */
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

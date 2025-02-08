@@ -1,0 +1,261 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e0ac1c; /* Amarelo mais claro */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+aside {
+    width: 200px;
+    background-color: #5c4033; /* Marrom fosco */
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin: 10px 0;
+}
+
+aside ul li a {
+    color: #b0b0b0; /* Cinza claro */
+    text-decoration: none;
+}
+
+aside ul li a:hover {
+    color: white;
+}
+
+main {
+    margin-left: 220px;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+/* Botão de troca de tema */
+.theme-toggle {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.theme-toggle:hover {
+    background-color: white;
+    color: #e0ac1c;
+}
+
+/* Tema escuro */
+.dark-theme {
+    background-color: #222;
+    color: white;
+}
+
+.dark-theme header {
+    background-color: #3a2a1a; /* Marrom escuro */
+}
+
+.dark-theme aside {
+    background-color: #2b1d14;
+}
+
+.dark-theme main {
+    background-color: #333;
+}
+
+/* Matérias */
+.mat {
+    border: 2px solid #3a2a1a; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 5px; 
+}
+
+.por {
+    border: 2px solid #3a2a1a; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 5px; 
+}
+
+.his {
+    border: 2px solid #3a2a1a; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 5px; 
+}
+
+.geo {
+    border: 2px solid #3a2a1a; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 5px; 
+}
+
+.ing {
+    border: 2px solid #3a2a1a; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 5px; 
+}
+
+.bio {
+    border: 2px solid #3a2a1a; /* Borda de 2px na cor marrom */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px 0; /* Espaçamento externo (10px em cima e embaixo, 0 nos lados) */
+    border-radius: 5px; /* Borda arredondada */
+}
+
+.fis {
+    border: 2px solid #3a2a1a; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 5px; 
+}
+
+.fil {
+    border: 2px solid #3a2a1a; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 5px; 
+}
+
+.qui {
+    border: 2px solid #3a2a1a; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 5px; 
+}
+
+.soc {
+    border: 2px solid #3a2a1a; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 5px; 
+}
+
+.art {
+    border: 2px solid #3a2a1a; 
+    padding: 10px;
+    margin: 10px 0; 
+    border-radius: 5px; 
+}
+
+.lpb {
+    border: 2px solid #3a2a1a; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 5px; 
+}
+
+.asc {
+    border: 2px solid #3a2a1a; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 5px; 
+}
+
+/* Efeito botões laterais */
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 0; /* Espaçamento interno */
+    margin: 5px 0; /* Espaçamento entre os itens */
+    background-color: #5a3e2b; /* Marrom da escola */
+    color: #ccc; /* Cinza claro */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+aside ul li:hover {
+    background-color: #8a5a44; /* Marrom mais claro ao passar o mouse */
+    color: white; /* Texto branco */
+}
+
+aside ul li:active {
+    background-color: #aa6b50; /* Cor temporária ao clicar */
+    transform: scale(0.98); /* Efeito de clique */
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    main {
+        margin-left: 0;
+        margin-top: 100px; /* Ajustar conforme necessário */
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    aside ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    aside ul li {
+        margin: 5px;
+        padding: 8px;
+    }
+}

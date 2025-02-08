@@ -250,14 +250,6 @@ aside ul li:active {
     /* Outros ajustes podem ser feitos aqui */
 }
 
-.menu-lateral {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 250px;
-    /* Outras propriedades */
-}
-
 div {
     width: 500px; /* Isso pode quebrar em telas pequenas */
 }
@@ -280,3 +272,42 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+/* mobile */
+
+/* Para ocultar o menu no celular */
+.sidebar, .popup {
+    display: none;
+  }
+  
+  /* Estilo para o botão de menu */
+  .menu-toggle {
+    display: none; /* Só aparece no celular */
+  }
+  
+  /* Estilo para popups */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup .content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+  }
+  

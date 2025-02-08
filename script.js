@@ -1,6 +1,43 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const mainContent = document.querySelector('main');
+document.addEventListener("DOMContentLoaded", function () {
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
+    const mainContent = document.querySelector("main"); // Corrigido para garantir que o mainContent seja manipulado
+
+    // Verifica o tema salvo no localStorage
+    let isDarkMode = localStorage.getItem("dark-mode") === "true";
+
+    function updateTheme() {
+        if (isDarkMode) {
+            body.classList.add("dark-theme");
+            body.classList.remove("light-theme");
+            themeToggle.classList.add("toggle-moon");
+            themeToggle.classList.remove("toggle-sun");
+            themeToggle.innerHTML = "🌙";  // Troca o emoji imediatamente
+        } else {
+            body.classList.add("light-theme");
+            body.classList.remove("dark-theme");
+            themeToggle.classList.add("toggle-sun");
+            themeToggle.classList.remove("toggle-moon");
+            themeToggle.innerHTML = "🌞";  // Troca o emoji imediatamente
+        }
+    }
+
+    // Atualiza o tema ao carregar a página
+    updateTheme();
+
+    themeToggle.addEventListener("click", function () {
+        isDarkMode = !isDarkMode;
+        localStorage.setItem("dark-mode", isDarkMode);
+        
+        // Adiciona a animação de transição
+        themeToggle.classList.add("animate-toggle");
+        
+        // Espera a animação terminar antes de atualizar o tema
+        setTimeout(() => {
+            updateTheme();
+            themeToggle.classList.remove("animate-toggle");
+        }, 400);  // Aqui permanece o tempo para animação do tema
+    });
 
     // Conteúdos padrão
     const defaultContent = `
@@ -64,9 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Alternância de tema
-    themeToggleBtn.addEventListener('click', () => {
+    themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-theme');
     });
-});
 
+});
 

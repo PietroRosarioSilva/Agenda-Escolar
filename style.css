@@ -273,3 +273,19 @@ body {
     flex-direction: column;
 }
 
+/* Adicionando animação para o botão de troca de tema */
+.animate-toggle {
+    animation: toggleAnimation 0.4s ease;
+}
+
+@keyframes toggleAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

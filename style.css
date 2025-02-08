@@ -222,40 +222,47 @@ aside ul li:active {
     transform: scale(0.98); /* Efeito de clique */
 }
 
+/* Media query para dispositivos com largura até 768px */
 @media (max-width: 768px) {
+    /* Ajustes para o layout */
     body {
-        flex-direction: column;
+        font-size: 14px; /* Ajuste de fonte */
     }
 
-    aside {
-        width: 100%;
+    .menu-lateral {
+        width: 100%; /* Ajusta o menu lateral para ocupar toda a largura */
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        z-index: 1000;
+    }
+
+    .barra-superior {
+        padding: 10px; /* Ajuste de padding */
+    }
+
+    img {
+        max-width: 100%; /* Imagens responsivas */
         height: auto;
-        position: relative;
     }
 
-    main {
-        margin-left: 0;
-        margin-top: 100px; /* Ajustar conforme necessário */
-    }
+    /* Outros ajustes podem ser feitos aqui */
+}
 
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 250px;
+    /* Outras propriedades */
+}
 
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
+div {
+    width: 500px; /* Isso pode quebrar em telas pequenas */
+}
 
-    aside ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    aside ul li {
-        margin: 5px;
-        padding: 8px;
-    }
+div {
+    width: 100%;
+    max-width: 500px; /* Ajusta automaticamente para telas menores */
 }

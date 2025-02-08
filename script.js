@@ -70,31 +70,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
- // mobile
-
- // Mostrar o menu lateral no celular
-const menuToggle = document.getElementById('menu-toggle');
-const popupMaterias = document.getElementById('popup-materias');
-const popupConteudo = document.getElementById('popup-conteudo');
-const closeBtns = document.querySelectorAll('.close-btn');
-
-// Toggle do menu
-menuToggle.addEventListener('click', () => {
-  popupMaterias.style.display = 'flex'; // Abre o popup de matérias
-});
-
-// Fechar popups
-closeBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    popupMaterias.style.display = 'none'; // Fecha o popup de matérias
-    popupConteudo.style.display = 'none'; // Fecha o popup de conteúdo
-  });
-});
-
-// Quando uma matéria for clicada
-const materias = document.querySelectorAll('#popup-materias a');
-materias.forEach(materia => {
-  materia.addEventListener('click', () => {
-    popupConteudo.style.display = 'flex'; // Abre o popup com o conteúdo
-  });
-});

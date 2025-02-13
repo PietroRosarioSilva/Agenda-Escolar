@@ -18,58 +18,58 @@ homeBtn.addEventListener("click", () => {
 
 lembretesBtn.addEventListener("click", () => {
   contentTitle.textContent = "Lembretes";
-  contentText.innerHTML = "<p>Veja seus lembretes importantes aqui.</p>";
+  contentText.innerHTML = "<p></p>";
 });
 
 trabalhosBtn.addEventListener("click", () => {
   contentTitle.textContent = "Trabalhos";
-  contentText.innerHTML = "<p>Confira seus trabalhos de cada matéria.</p>";
+  contentText.innerHTML = "<p></p>";
 });
 
 provasBtn.addEventListener("click", () => {
   contentTitle.textContent = "Provas";
-  contentText.innerHTML = "<p>Fique atento às datas das suas provas.</p>";
+  contentText.innerHTML = "<p></p>";
 });
 
 // Botões das matérias
 document.getElementById("matematica").addEventListener("click", () => {
   contentTitle.textContent = "Matemática";
-  contentText.innerHTML = "<p>Bem-vindo à Matemática! Aqui você aprenderá sobre álgebra, geometria e muito mais.</p>";
+  contentText.innerHTML = "<p></p>";
 });
 
 document.getElementById("portugues").addEventListener("click", () => {
   contentTitle.textContent = "Português";
-  contentText.innerHTML = "<p>Bem-vindo ao Português! Estude gramática, literatura e interpretação de textos.</p>";
+  contentText.innerHTML = "<p></p>";
 });
 
 document.getElementById("geografia").addEventListener("click", () => {
   contentTitle.textContent = "Geografia";
-  contentText.innerHTML = "<p>Bem-vindo à Geografia! Vamos explorar os continentes, clima, e a dinâmica dos países.</p>";
+  contentText.innerHTML = "<p></p>";
 });
 
 document.getElementById("historia").addEventListener("click", () => {
   contentTitle.textContent = "História";
-  contentText.innerHTML = "<p>Bem-vindo à História! Descubra as grandes civilizações e eventos históricos que moldaram o mundo.</p>";
+  contentText.innerHTML = "<p></p>";
 });
 
 document.getElementById("fisica").addEventListener("click", () => {
   contentTitle.textContent = "Física";
-  contentText.innerHTML = "<p>Bem-vindo à Física! Estude os princípios das leis naturais, como a gravidade e a luz.</p>";
+  contentText.innerHTML = "<p></p>";
 });
 
 document.getElementById("quimica").addEventListener("click", () => {
   contentTitle.textContent = "Química";
-  contentText.innerHTML = "<p>Bem-vindo à Química! Aprenda sobre reações químicas, elementos e suas propriedades.</p>";
+  contentText.innerHTML = "<p></p>";
 });
 
 document.getElementById("biologia").addEventListener("click", () => {
   contentTitle.textContent = "Biologia";
-  contentText.innerHTML = "<p>Bem-vindo à Biologia! Explore os seres vivos, sua evolução e os sistemas biológicos.</p>";
+  contentText.innerHTML = "<p>.</p>";
 });
 
 document.getElementById("filosofia").addEventListener("click", () => {
   contentTitle.textContent = "Filosofia";
-  contentText.innerHTML = "<p>Bem-vindo à Filosofia! Questione a vida e a existência através das ideias de grandes pensadores.</p>";
+  contentText.innerHTML = "<p></p>";
 });
 
 document.getElementById("sociologia").addEventListener("click", () => {

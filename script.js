@@ -1,109 +1,99 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const themeToggle = document.getElementById("theme-toggle");
-    const body = document.body;
-    const mainContent = document.querySelector("main"); // Corrigido para garantir que o mainContent seja manipulado
+const toggleThemeBtn = document.getElementById("toggle-theme");
+const toggleMenuBtn = document.getElementById("toggle-menu");
+const sidebar = document.getElementById("sidebar");
 
-    // Verifica o tema salvo no localStorage
-    let isDarkMode = localStorage.getItem("dark-mode") === "true";
+const homeBtn = document.getElementById("home");
+const lembretesBtn = document.getElementById("lembretes");
+const trabalhosBtn = document.getElementById("trabalhos");
+const provasBtn = document.getElementById("provas");
 
-    function updateTheme() {
-        if (isDarkMode) {
-            body.classList.add("dark-theme");
-            body.classList.remove("light-theme");
-            themeToggle.classList.add("toggle-moon");
-            themeToggle.classList.remove("toggle-sun");
-            themeToggle.innerHTML = "🌙";  // Troca o emoji imediatamente
-        } else {
-            body.classList.add("light-theme");
-            body.classList.remove("dark-theme");
-            themeToggle.classList.add("toggle-sun");
-            themeToggle.classList.remove("toggle-moon");
-            themeToggle.innerHTML = "🌞";  // Troca o emoji imediatamente
-        }
-    }
+const contentTitle = document.getElementById("content-title");
+const contentText = document.getElementById("content-text");
 
-    // Atualiza o tema ao carregar a página
-    updateTheme();
-
-    themeToggle.addEventListener("click", function () {
-        isDarkMode = !isDarkMode;
-        localStorage.setItem("dark-mode", isDarkMode);
-        
-        // Adiciona a animação de transição
-        themeToggle.classList.add("animate-toggle");
-        
-        // Espera a animação terminar antes de atualizar o tema
-        setTimeout(() => {
-            updateTheme();
-            themeToggle.classList.remove("animate-toggle");
-        }, 400);  // Aqui permanece o tempo para animação do tema
-    });
-
-    // Conteúdos padrão
-    const defaultContent = `
-        <h2>Bem-vindo à Agenda Escolar</h2>
-        <p>Aqui você pode acompanhar seus lembretes e tarefas.</p>
-    `;
-
-    const sections = {
-        home: defaultContent,
-        lembretes: `
-            <h2>Lembretes</h2>
-            <p>Aqui você pode ver seus lembretes importantes.</p>
-        `,
-        trabalhos: `
-            <h2>Trabalhos</h2>
-            <ul>
-                <li><strong>História:</strong> Dissertar da página 51 à 53.</li>
-                <li><strong>Filosofia:</strong> Dissertar do capítulo 2, páginas 21 à 35.</li>
-            </ul>
-        `,
-        provas: `
-            <h2>Provas</h2>
-            <p>Datas e conteúdos das próximas provas.</p>
-        `
-    };
-
-    const subjects = {
-        mat: { title: "Matemática", content: "Conteúdos e lembretes de Matemática." },
-        por: { title: "Português", content: "Conteúdos e lembretes de Português." },
-        his: { title: "História", content: "Conteúdos e lembretes de História." },
-        geo: { title: "Geografia", content: "Conteúdos e lembretes de Geografia." },
-        ing: { title: "Inglês", content: "Conteúdos e lembretes de Inglês." },
-        bio: { title: "Biologia", content: "Conteúdos e lembretes de Biologia." },
-        fis: { title: "Física", content: "Conteúdos e lembretes de Física." },
-        qui: { title: "Química", content: "Conteúdos e lembretes de Química." },
-        fil: { title: "Filosofia", content: "Conteúdos e lembretes de Filosofia." },
-        soc: { title: "Sociologia", content: "Conteúdos e lembretes de Sociologia." },
-        art: { title: "Arte", content: "Conteúdos e lembretes de Arte." },
-        lpb: { title: "LPBL4", content: "Conteúdos e lembretes de LPBL4." },
-        asc: { title: "ASCL4", content: "Conteúdos e lembretes de ASCL4." }
-    };
-
-    // Evento para Home, Lembretes, Trabalhos e Provas
-    document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const section = e.target.getAttribute('data-section');
-            mainContent.innerHTML = sections[section] || defaultContent;
-        });
-    });
-
-    // Evento para as matérias no menu lateral
-    Object.keys(subjects).forEach(id => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.addEventListener('click', (e) => {
-                e.preventDefault();
-                mainContent.innerHTML = `<h2>${subjects[id].title}</h2><p>${subjects[id].content}</p>`;
-            });
-        }
-    });
-
-    // Alternância de tema
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-theme');
-    });
-
+// Botões de navegação principais
+homeBtn.addEventListener("click", () => {
+  contentTitle.textContent = "Bem-vindo à Agenda Escolar!";
+  contentText.innerHTML = "<p> </p>";
 });
 
+lembretesBtn.addEventListener("click", () => {
+  contentTitle.textContent = "Lembretes";
+  contentText.innerHTML = "<p>Veja seus lembretes importantes aqui.</p>";
+});
+
+trabalhosBtn.addEventListener("click", () => {
+  contentTitle.textContent = "Trabalhos";
+  contentText.innerHTML = "<p>Confira seus trabalhos de cada matéria.</p>";
+});
+
+provasBtn.addEventListener("click", () => {
+  contentTitle.textContent = "Provas";
+  contentText.innerHTML = "<p>Fique atento às datas das suas provas.</p>";
+});
+
+// Botões das matérias
+document.getElementById("matematica").addEventListener("click", () => {
+  contentTitle.textContent = "Matemática";
+  contentText.innerHTML = "<p>Bem-vindo à Matemática! Aqui você aprenderá sobre álgebra, geometria e muito mais.</p>";
+});
+
+document.getElementById("portugues").addEventListener("click", () => {
+  contentTitle.textContent = "Português";
+  contentText.innerHTML = "<p>Bem-vindo ao Português! Estude gramática, literatura e interpretação de textos.</p>";
+});
+
+document.getElementById("geografia").addEventListener("click", () => {
+  contentTitle.textContent = "Geografia";
+  contentText.innerHTML = "<p>Bem-vindo à Geografia! Vamos explorar os continentes, clima, e a dinâmica dos países.</p>";
+});
+
+document.getElementById("historia").addEventListener("click", () => {
+  contentTitle.textContent = "História";
+  contentText.innerHTML = "<p>Bem-vindo à História! Descubra as grandes civilizações e eventos históricos que moldaram o mundo.</p>";
+});
+
+document.getElementById("fisica").addEventListener("click", () => {
+  contentTitle.textContent = "Física";
+  contentText.innerHTML = "<p>Bem-vindo à Física! Estude os princípios das leis naturais, como a gravidade e a luz.</p>";
+});
+
+document.getElementById("quimica").addEventListener("click", () => {
+  contentTitle.textContent = "Química";
+  contentText.innerHTML = "<p>Bem-vindo à Química! Aprenda sobre reações químicas, elementos e suas propriedades.</p>";
+});
+
+document.getElementById("biologia").addEventListener("click", () => {
+  contentTitle.textContent = "Biologia";
+  contentText.innerHTML = "<p>Bem-vindo à Biologia! Explore os seres vivos, sua evolução e os sistemas biológicos.</p>";
+});
+
+document.getElementById("filosofia").addEventListener("click", () => {
+  contentTitle.textContent = "Filosofia";
+  contentText.innerHTML = "<p>Bem-vindo à Filosofia! Questione a vida e a existência através das ideias de grandes pensadores.</p>";
+});
+
+document.getElementById("sociologia").addEventListener("click", () => {
+  contentTitle.textContent = "Sociologia";
+  contentText.innerHTML = "<p>Bem-vindo à Sociologia! Entenda as relações sociais, culturas e organizações humanas.</p>";
+});
+
+document.getElementById("ingles").addEventListener("click", () => {
+  contentTitle.textContent = "Inglês";
+  contentText.innerHTML = "<p>Bem-vindo ao Inglês! Estude a língua inglesa e suas várias nuances.</p>";
+});
+
+document.getElementById("educacao").addEventListener("click", () => {
+  contentTitle.textContent = "Educação Física";
+  contentText.innerHTML = "<p>Bem-vindo à Educação Física! Vamos estudar sobre o corpo humano, esportes e saúde.</p>"
+});
+
+// Alternar tema
+toggleThemeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  toggleThemeBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+});
+
+// Ocultar/Mostrar menu lateral
+toggleMenuBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("hidden");
+});

@@ -1,56 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda Escolar</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda Escolar</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <a href="#" data-section="home">Home</a>
-            <a href="#" data-section="lembretes">Lembretes</a>
-            <a href="#" data-section="trabalhos">Trabalhos</a>
-            <a href="#" data-section="provas">Provas</a>
-        </nav>
-        <button id="theme-toggle" class="theme-toggle">🌙</button>
-    </header>
-    <aside>
-        <ul>
+<body class="light-mode">
 
-            <li id="mat" class="mat"><a href="#">Matemática</a></li>
+  <div class="top-bar">
+    <button id="toggle-menu">☰</button>
+    <a href="#" id="home">Home</a>
+    <a href="#" id="lembretes">Lembretes</a>
+    <a href="#" id="trabalhos">Trabalhos</a>
+    <a href="#" id="provas">Provas</a>
+    <button id="toggle-theme">🌙</button>
+  </div>
 
-            <li id="por" class="por"><a href="#">Português</a></li>
+  <div class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="#" id="matematica">Matemática</a></li>
+      <li><a href="#" id="portugues">Português</a></li>
+      <li><a href="#" id="geografia">Geografia</a></li>
+      <li><a href="#" id="historia">História</a></li>
+      <li><a href="#" id="fisica">Física</a></li>
+      <li><a href="#" id="quimica">Química</a></li>
+      <li><a href="#" id="biologia">Biologia</a></li>
+      <li><a href="#" id="filosofia">Filosofia</a></li>
+      <li><a href="#" id="sociologia">Sociologia</a></li>
+      <li><a href="#" id="ingles">Inglês</a></li>
+      <li><a href="#" id="educacao">Educação Física</a></li>
+    </ul>
+  </div>
 
-            <li id="his" class="his"><a href="#">História</a></li>
 
-            <li id="geo" class="geo"><a href="#">Geografia</a></li>
 
-            <li id="ing" class="ing"><a href="#">Inglês</a></li>
+  <div class="content">
+    <h1 id="content-title">Bem-vindo à Agenda Escolar!</h1>
+    <div id="content-text">
+      <p>Aqui você pode acessar todos os conteúdos da sua agenda escolar.</p>
+    </div>
+  </div>
 
-            <li id="bio" class="bio"><a href="#">Biologia</a></li>
-
-            <li id="fis" class="fis"><a href="#">Física</a></li>
-
-            <li id="qui" class="qui"><a href="#">Química</a></li>
-
-            <li id="fil" class="fil"><a href="#">Filósofia</a></li>
-
-            <li id="soc" class="soc"><a href="#">Sociológia</a></li>
-
-            <li id="art" class="art"><a href="#">Arte</a></li>
-
-            <li id="lpb" class="lpb"><a href="#">LPBL4</a></li>
-
-            <li id="asc" class="asc"><a href="#">ASCL4</a></li>
-            
-        </ul>
-    </aside>
-    <main>
-        <h2>Bem-vindo à Agenda Escolar</h2>
-        <p>Aqui você pode acompanhar seus lembretes e tarefas.</p>
-    </main>
+  <script src="script.js"></script>
 </body>
 </html>

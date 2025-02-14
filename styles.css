@@ -142,18 +142,19 @@ body.dark-mode .sidebar {
     padding: 10px;
   }
 
-  /* Mostra o botão de mudar o tema no celular */
+  /* Botão de alternar tema no celular (parte inferior direita) */
   #toggle-theme {
-    display: block; /* Garante que o botão apareça */
-    position: fixed; /* Fixa no topo */
-    top: 10px;
-    right: 10px; /* Mantém visível no canto */
-    background-color: #f7d60b; /* Cor de fundo */
+    display: block;
+    position: fixed;
+    bottom: 20px; /* Move para a parte inferior */
+    right: 20px; /* Mantém no canto direito */
+    background-color: #f7d60b;
     color: white;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 50px;
     font-size: 16px;
     cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
   }
 
   /* Se o menu lateral estiver fechado, o conteúdo ocupa a tela toda */

@@ -119,3 +119,45 @@ body.dark-mode .top-bar {
 body.dark-mode .sidebar {
   background-color: #3e2723;
 }
+
+
+/* Ajustes para telas menores (celulares) */
+@media screen and (max-width: 768px) {
+  
+  /* Garante que a largura do conteúdo não fique cortada */
+  .content {
+    margin-left: 10px; /* Deixa um pequeno espaço nas laterais */
+    margin-right: 10px;
+    padding: 15px; /* Ajuste no espaçamento interno */
+  }
+
+  /* Faz a sidebar ocupar menos espaço ou ocultar */
+  .sidebar {
+    width: 100px; /* Deixa a sidebar mais estreita */
+  }
+
+  /* Ajusta os botões do menu lateral para caberem melhor */
+  .sidebar ul li a {
+    font-size: 14px; /* Diminui um pouco a fonte para encaixar melhor */
+    padding: 10px;
+  }
+
+  /* Mostra o botão de mudar o tema no celular */
+  #toggle-theme {
+    display: block; /* Garante que o botão apareça */
+    position: fixed; /* Fixa no topo */
+    top: 10px;
+    right: 10px; /* Mantém visível no canto */
+    background-color: #f7d60b; /* Cor de fundo */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  /* Se o menu lateral estiver fechado, o conteúdo ocupa a tela toda */
+  .sidebar.hidden + .content {
+    margin-left: 0;
+  }
+}

@@ -64,7 +64,7 @@ document.getElementById("quimica").addEventListener("click", () => {
 
 document.getElementById("biologia").addEventListener("click", () => {
   contentTitle.textContent = "Biologia";
-  contentText.innerHTML = "<p>.</p>";
+  contentText.innerHTML = "<p</p>";
 });
 
 document.getElementById("filosofia").addEventListener("click", () => {
@@ -74,17 +74,17 @@ document.getElementById("filosofia").addEventListener("click", () => {
 
 document.getElementById("sociologia").addEventListener("click", () => {
   contentTitle.textContent = "Sociologia";
-  contentText.innerHTML = "<p>Bem-vindo à Sociologia! Entenda as relações sociais, culturas e organizações humanas.</p>";
+  contentText.innerHTML = "<p></p>";
 });
 
 document.getElementById("ingles").addEventListener("click", () => {
   contentTitle.textContent = "Inglês";
-  contentText.innerHTML = "<p>Bem-vindo ao Inglês! Estude a língua inglesa e suas várias nuances.</p>";
+  contentText.innerHTML = "<p></p>";
 });
 
 document.getElementById("educacao").addEventListener("click", () => {
   contentTitle.textContent = "Educação Física";
-  contentText.innerHTML = "<p>Bem-vindo à Educação Física! Vamos estudar sobre o corpo humano, esportes e saúde.</p>"
+  contentText.innerHTML = "<p></p>"
 });
 
 // Alternar tema

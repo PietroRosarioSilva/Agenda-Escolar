@@ -9,7 +9,6 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Barra superior fixa */
 .top-bar {
   background-color: #f7d60b;
   padding: 10px;
@@ -37,14 +36,14 @@ body {
   color: white;
 }
 
-/* Sidebar */
+/* Sidebar inicialmente oculta */
 .sidebar {
   width: 230px;
-  height: 100vh; /* Garante que a sidebar ocupe a tela inteira */
+  height: 100vh;
   background-color: #5a3e2b;
   border-right: 3px solid #3e2a1f;
   position: fixed;
-  top: 50px; /* Deixa espaço para a top-bar */
+  top: 50px;
   left: 0;
   padding-top: 10px;
   transition: transform 0.3s ease-in-out;
@@ -54,6 +53,7 @@ body {
   transform: translateX(-250px);
 }
 
+/* Botões da sidebar */
 .sidebar ul {
   list-style: none;
   padding: 0;
@@ -73,27 +73,7 @@ body {
   color: white;
 }
 
-/* Botões dentro da sidebar */
-.sidebar button {
-  width: 100%;
-  height: 50px;
-  text-align: center;
-  font-weight: bold;
-  color: #dcdcdc;
-  border: none;
-  background: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.sidebar button:hover {
-  color: white;
-  background-color: #4a2f1f;
-}
-
-/* Ajuste do conteúdo */
+/* Conteúdo principal */
 .content {
   margin-left: 230px;
   margin-top: 60px;
@@ -101,9 +81,10 @@ body {
   transition: margin-left 0.3s ease-in-out;
 }
 
-/* Quando a sidebar está oculta */
+/* Se a sidebar estiver oculta, o conteúdo ocupa a tela toda */
 .sidebar.hidden + .content {
-  margin-left: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* Modo escuro */
@@ -118,47 +99,4 @@ body.dark-mode .top-bar {
 
 body.dark-mode .sidebar {
   background-color: #3e2723;
-}
-
-
-/* Ajustes para telas menores (celulares) */
-@media screen and (max-width: 768px) {
-  
-  /* Garante que a largura do conteúdo não fique cortada */
-  .content {
-    margin-left: 10px; /* Deixa um pequeno espaço nas laterais */
-    margin-right: 10px;
-    padding: 15px; /* Ajuste no espaçamento interno */
-  }
-
-  /* Faz a sidebar ocupar menos espaço ou ocultar */
-  .sidebar {
-    width: 100px; /* Deixa a sidebar mais estreita */
-  }
-
-  /* Ajusta os botões do menu lateral para caberem melhor */
-  .sidebar ul li a {
-    font-size: 14px; /* Diminui um pouco a fonte para encaixar melhor */
-    padding: 10px;
-  }
-
-  /* Botão de alternar tema no celular (parte inferior direita) */
-  #toggle-theme {
-    display: block;
-    position: fixed;
-    bottom: 20px; /* Move para a parte inferior */
-    right: 20px; /* Mantém no canto direito */
-    background-color: #f7d60b;
-    color: white;
-    padding: 10px;
-    border-radius: 50px;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
-  }
-
-  /* Se o menu lateral estiver fechado, o conteúdo ocupa a tela toda */
-  .sidebar.hidden + .content {
-    margin-left: 0;
-  }
 }

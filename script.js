@@ -251,3 +251,12 @@ document.getElementById("lpbl").addEventListener("click", () => {
   ajustarPosicaoBotaoTema();
   window.addEventListener("resize", ajustarPosicaoBotaoTema);
 });
+
+
+function ajustarPosicaoBotaoTema() {
+  if (window.innerWidth <= 768) {
+    toggleThemeBtn.classList.add("bottom-theme"); // Coloca na parte inferior
+  } else {
+    toggleThemeBtn.classList.remove("bottom-theme"); // Mantém no topo no PC
+  }
+}

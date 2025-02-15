@@ -111,26 +111,33 @@ img {
   object-fit: contain; /* Evita que a imagem estoure o container */
 }
 
-/* Estilo para o botão de alternar tema no PC */
-#theme-toggle {
+/* Estilos para a alternância de tema no PC */
+.theme-toggle {
   position: absolute;
-  top: 10px;  /* Ajuste a distância do topo */
-  right: 10px; /* Coloca o botão à direita */
-  z-index: 10; /* Garante que o botão não fique atrás de outros elementos */
+  top: 0;
+  right: 10px;
+  z-index: 1000;
 }
 
-/* No celular, o botão vai para a parte inferior */
+/* No celular, coloca o botão embaixo da tela */
 @media screen and (max-width: 768px) {
-  #theme-toggle {
-    position: fixed;   /* Garante que o botão fique fixo na tela */
-    bottom: 20px;      /* Coloca o botão no rodapé */
-    right: 20px;       /* Garante que ele fique à direita */
-    background-color: #f7d60b;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    z-index: 10; /* Garante que o botão fique sobre outros elementos */
+  .theme-toggle {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
   }
+}
+
+
+/* Adiciona uma classe para o botão de alternar tema no celular */
+.bottom-theme {
+  position: fixed;
+  bottom: 20px; /* Ajuste o valor se necessário */
+  right: 20px; /* Ajuste para o lado direito da tela */
+  z-index: 1000; /* Garante que o botão fique sobre outros elementos */
+  background-color: #fff; /* Opcional, para garantir que o botão tenha fundo branco */
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

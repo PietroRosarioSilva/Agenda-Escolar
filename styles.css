@@ -20,6 +20,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 50px;
+  z-index: 1000; /* Garante que a barra fique sobre os outros elementos */
 }
 
 .top-bar a {
@@ -99,4 +100,37 @@ body.dark-mode .top-bar {
 
 body.dark-mode .sidebar {
   background-color: #3e2723;
+}
+
+/* Ajuste para as imagens */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 60px auto 0; /* Garante que a imagem fique abaixo da barra amarela */
+  object-fit: contain; /* Evita que a imagem estoure o container */
+}
+
+/* Estilo para o botão de alternar tema no PC */
+#theme-toggle {
+  position: absolute;
+  top: 10px;  /* Ajuste a distância do topo */
+  right: 10px; /* Coloca o botão à direita */
+  z-index: 10; /* Garante que o botão não fique atrás de outros elementos */
+}
+
+/* No celular, o botão vai para a parte inferior */
+@media screen and (max-width: 768px) {
+  #theme-toggle {
+    position: fixed;   /* Garante que o botão fique fixo na tela */
+    bottom: 20px;      /* Coloca o botão no rodapé */
+    right: 20px;       /* Garante que ele fique à direita */
+    background-color: #f7d60b;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10; /* Garante que o botão fique sobre outros elementos */
+  }
 }

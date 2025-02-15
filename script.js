@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     contentTitle.textContent = "Trabalhos";
     contentText.innerHTML = `
-      <p><strong>Trabalho Bimestral História do 1º ano médio:</strong> Unidade 4 do caderno 1 - Oriente Médio: Império Bizantino (Pg 51 a 53).</p>
+      <p><strong>📖 Trabalho Bimestral História do 1º ano médio:</strong> Unidade 4 do caderno 1 - Oriente Médio: Império Bizantino (Pg 51 a 53).</p>
       <p>Deve conter Capa com nome, sobrenome, número, série, sala e o tema do trabalho.</p>
       <p><strong>Conteúdo:</strong> Abordar todos os tópicos da apostila e dissertá-los. Caso queira adicionar mais conteúdo, faça uma bibliografia.</p>
       <p>Pode ser digitado ou manuscrito.</p>
@@ -101,11 +101,20 @@ document.addEventListener("DOMContentLoaded", () => {
       
       <hr> <!-- Linha para separar os trabalhos -->
   
-      <p><strong>Trabalho Bimestral Filosofia do 1º ano médio:</strong> Unidade 2 do caderno 1 - Diálogos entre mito, Arte e Filosofia (Pg 21 a 35).</p>
+      <p><strong>📖 Trabalho Bimestral Filosofia do 1º ano médio:</strong> Unidade 2 do caderno 1 - Diálogos entre mito, Arte e Filosofia (Pg 21 a 35).</p>
       <p>Deve conter Capa com nome, sobrenome, número, série, sala e o tema do trabalho.</p>
       <p><strong>Conteúdo:</strong> Abordar todos os tópicos da apostila e dissertá-los. Caso queira adicionar mais conteúdo, faça uma bibliografia.</p>
       <p>Pode ser digitado ou manuscrito.</p>
       <p><strong>ENTREGAR DIA:</strong> 18/03/25</p>
+
+<hr> <!-- Linha para separar os trabalhos -->
+
+          <div class="trabalho">
+      <h3>📖 Inglês</h3>
+      <p><strong>Páginas 33 e 34:</strong> Copiar ou responder no caderno.</p>
+      <p><strong>Entrega:</strong> 28/02/25</p>
+    </div>
+
     `;
   });
 
@@ -113,18 +122,28 @@ document.addEventListener("DOMContentLoaded", () => {
     contentTitle.textContent = "Provas";
   
     contentText.innerHTML = `
-      <h2>Prova de Matemática</h2>
+
+      <h3>🧮 Matemática</h3>
       <p><strong>Data:</strong> 17/02/2025</p>
-      <p><strong>Tópicos a serem estudados:</strong></p>
+      <p><strong>Conteúdo:</strong></p>
       <ul>
         <li>Equação do 2º grau - <a href="https://www.youtube.com/watch?v=HCylt5HtFMs" target="_blank">Vídeo explicativo</a></li>
-        <li>MMC (Mínimo Múltiplo Comum) - <a href="https://www.youtube.com/watch?v=Ao7Sz3gdmNY" target="_blank">Vídeo explicativo</a></li>
+        <li>MMC - <a href="https://www.youtube.com/watch?v=Ao7Sz3gdmNY" target="_blank">Vídeo explicativo</a></li>
         <li>Notação científica - <a href="https://www.youtube.com/watch?v=MLBLD38UP_0" target="_blank">Vídeo explicativo</a></li>
-        <li>MDC (Máximo Divisor Comum) - <a href="https://www.youtube.com/watch?v=La_EvMyv1lQ" target="_blank">Vídeo explicativo</a></li>
+        <li>MDC - <a href="https://www.youtube.com/watch?v=La_EvMyv1lQ" target="_blank">Vídeo explicativo</a></li>
         <li>Expressões numéricas - <a href="https://www.youtube.com/watch?v=qPp4dbLSva0" target="_blank">Vídeo explicativo</a></li>
         <li>Sistemas lineares - <a href="https://www.youtube.com/watch?v=7CvjlSivFlQ" target="_blank">Vídeo explicativo</a></li>
       </ul>
-      <p>Durante a prova, você pode usar um papel com os exemplos que a professora passou no quadro e calculadora.</p>
+        <p>Durante a prova, você pode usar um papel com os exemplos que a professora passou no quadro e calculadora.</p>
+    </div>
+
+        <div class="prova">
+      <h3>📖 Inglês</h3>
+      <p><strong>Data:</strong> 14/03/2025</p>
+      <p><strong>Conteúdo:</strong> Páginas 2 a 13.</p>
+    </div>
+
+
     `;
   });
   
@@ -185,19 +204,19 @@ document.getElementById("ingles").addEventListener("click", () => {
 document.getElementById("artes").addEventListener("click", () => {
   contentTitle.textContent = "Artes";
   contentText.innerHTML = `
-    <div class="conteudo-aula">
-        <h2>Aula 1 – 10/02 a 14/02</h2>
-        <p><strong>Prof° Janaina Queiroz - Arte</strong></p>
-        <h3>Arte, Poder e Identidade</h3>
+ <div class="conteudo-aula">
+            <h2>Aula 1 - 10/02 a 14/02</h2>
+            <p><strong>Profª Janaina Queiroz - Arte</strong></p>
+            <h3>Arte, Poder e Identidade</h3>
+            Imagens da Aula</h3>
+            <img src="imagem_9.jpg" alt="Imagem da aula de arte">
+              <img src="imagem_7.jpg" alt="Imagem Guerrilha Girls">
+            <img src="imagem_6.jpg" alt="Imagem da aula de arte">
+            <img src="imagem_3.jpg" alt="Imagem da aula de arte">
+            <img src="imagem_1.jpg" alt="Imagem da aula de arte">
+            
 
-        <p><strong>Assista:</strong> <a href="https://www.youtube.com/watch?v=AIhxNGIoH0A" target="_blank">Clique aqui para assistir</a></p>
-
-        <h3>Atividade</h3>
-        <p><strong>Responda as questões abaixo, no caderno de arte.</strong></p>
-
-        <!-- Botão para download do PDF -->
-        <a href="Aula_Arte.pdf" download class="download-btn">📄 Baixar PDF da Aula</a>
-    </div>
+        </div>
   `;
 });
 
@@ -213,20 +232,22 @@ document.getElementById("lpbl").addEventListener("click", () => {
   contentText.innerHTML = "<p></p>"
 });
 
-  subjects.forEach(subject => {
-    const button = document.getElementById(subject);
-    if (button) {
-      button.addEventListener("click", () => {
-        contentTitle.textContent = subject.charAt(0).toUpperCase() + subject.slice(1);
-        contentText.innerHTML = `<p>Conteúdo de ${subject}</p>`;
-      });
-    }
-  });
-
   // Alternar tema
   toggleThemeBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
     toggleThemeBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
   });
 
+  // Ajustar a posição do botão de tema no celular
+  function ajustarPosicaoBotaoTema() {
+    if (window.innerWidth <= 768) {
+      toggleThemeBtn.classList.add("bottom-theme"); // Coloca na parte inferior
+    } else {
+      toggleThemeBtn.classList.remove("bottom-theme"); // Mantém no topo no PC
+    }
+  }
+
+  // Chama a função ao carregar e ao redimensionar a tela
+  ajustarPosicaoBotaoTema();
+  window.addEventListener("resize", ajustarPosicaoBotaoTema);
 });

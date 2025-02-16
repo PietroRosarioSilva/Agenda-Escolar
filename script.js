@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           <div class="trabalho">
       <h3>📖 Inglês</h3>
-      <p><strong>Páginas 33 e 34:</strong> Copiar ou responder no caderno.</p>
+      <p><strong>Páginas 33 e 34:</strong> Copiar numa folha de almaço e responder (ou tirar xerox) ou arrancar a página da apostila e responder.</p>
       <p><strong>Entrega:</strong> 28/02/25</p>
     </div>
 
@@ -157,7 +157,14 @@ document.getElementById("matematica").addEventListener("click", () => {
 
 document.getElementById("portugues").addEventListener("click", () => {
   contentTitle.textContent = "Português";
-  contentText.innerHTML = "<p></p>";
+  contentText.innerHTML =  `
+ <div class="conteudo-aula">
+            <h2>Unidade 1</h2>
+            <p>Fazer todas as atividades da unidade 1</p>
+            <h2>Unidade 2</h2>
+            <p>Fazer até a pg 21</p>
+        </div>
+  `;
 });
 
 document.getElementById("geografia").addEventListener("click", () => {
@@ -172,7 +179,13 @@ document.getElementById("historia").addEventListener("click", () => {
 
 document.getElementById("fisica").addEventListener("click", () => {
   contentTitle.textContent = "Física";
-  contentText.innerHTML = "<p></p>";
+  contentText.innerHTML =`
+  <div class="conteudo-aula">
+  <h2>Unidade 1</h2>
+  <p>Pg 8- exercícios: todos; Pg 9- exercícios:01, 02 e 04; Pg 10- exercícios: todos;</p>
+
+</div>
+`;
 });
 
 document.getElementById("quimica").addEventListener("click", () => {

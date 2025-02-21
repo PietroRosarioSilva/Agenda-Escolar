@@ -113,8 +113,18 @@ document.addEventListener("DOMContentLoaded", () => {
       <h3>📖 Inglês</h3>
       <p><strong>Páginas 33 e 34:</strong> Copiar numa folha de almaço e responder (ou tirar xerox) ou arrancar a página da apostila e responder.</p>
       <p><strong>Entrega:</strong> 28/02/25</p>
-    </div>
 
+    
+
+<hr> <!-- Linha para separar os trabalhos -->
+    <h3>📖 Português</h3>
+      <p><strong>Páginas 43 e 44:</strong> arrancar a página da apostila e responder.</p>
+      <p><strong>Entrega:</strong> 24/02/25</p>
+      <h3>Análise linguística</h3>
+      <p><strong>Páginas 47 e 48:</strong> arrancar a página da apostila e responder.</p>
+      <p><strong>Entrega:</strong> 24/02/25</p>
+    
+</div>
     `;
   });
 
@@ -122,23 +132,14 @@ document.addEventListener("DOMContentLoaded", () => {
     contentTitle.textContent = "Provas";
   
     contentText.innerHTML = `
-
-      <h3>🧮 Matemática</h3>
-      <p><strong>Data:</strong> 17/02/2025</p>
-      <p><strong>Conteúdo:</strong></p>
-      <ul>
-        <li>Equação do 2º grau - <a href="https://www.youtube.com/watch?v=HCylt5HtFMs" target="_blank">Vídeo explicativo</a></li>
-        <li>MMC - <a href="https://www.youtube.com/watch?v=Ao7Sz3gdmNY" target="_blank">Vídeo explicativo</a></li>
-        <li>Notação científica - <a href="https://www.youtube.com/watch?v=MLBLD38UP_0" target="_blank">Vídeo explicativo</a></li>
-        <li>MDC - <a href="https://www.youtube.com/watch?v=La_EvMyv1lQ" target="_blank">Vídeo explicativo</a></li>
-        <li>Expressões numéricas - <a href="https://www.youtube.com/watch?v=qPp4dbLSva0" target="_blank">Vídeo explicativo</a></li>
-        <li>Sistemas lineares - <a href="https://www.youtube.com/watch?v=7CvjlSivFlQ" target="_blank">Vídeo explicativo</a></li>
-      </ul>
-        <p>Durante a prova, você pode usar um papel com os exemplos que a professora passou no quadro e calculadora.</p>
-    </div>
-
         <div class="prova">
       <h3>📖 Inglês</h3>
+      <p><strong>Data:</strong> 14/03/2025</p>
+      <p><strong>Conteúdo:</strong> Páginas 2 a 13.</p>
+    </div>
+
+            <div class="prova">
+      <h3>📖 Português</h3>
       <p><strong>Data:</strong> 14/03/2025</p>
       <p><strong>Conteúdo:</strong> Páginas 2 a 13.</p>
     </div>
@@ -182,7 +183,7 @@ document.getElementById("fisica").addEventListener("click", () => {
   contentText.innerHTML =`
   <div class="conteudo-aula">
   <h2>Unidade 1</h2>
-  <p>Pg 8- exercícios: todos; Pg 9- exercícios:01, 02 e 04; Pg 10- exercícios: todos;</p>
+  <p>Pg 8- exercícios: todos; Pg 9- exercícios: todos; Pg 10- exercícios: todos; Pg 17- exercícios: 1,2,3; Pg 18- exercícios: 4,5,6; Pg 19- exercícios: todos; Pg 20- exercícios: 4 e 6; Pg 21- exercícios: todos;</p>
 
 </div>
 `;
@@ -190,7 +191,16 @@ document.getElementById("fisica").addEventListener("click", () => {
 
 document.getElementById("quimica").addEventListener("click", () => {
   contentTitle.textContent = "Química";
-  contentText.innerHTML = "<p></p>";
+  contentText.innerHTML = `
+  <div class="conteudo-aula">
+  <h2>Atv. Complementar</h2>
+  <img src="sim.png" alt="sim">
+  <img src="SIM 2.png" alt="sim2">
+
+  <p>DATA DE ENTREGA: 27/02 </p>
+
+  </div>
+  `;
 });
 
 document.getElementById("biologia").addEventListener("click", () => {
@@ -206,7 +216,13 @@ document.getElementById("filosofia").addEventListener("click", () => {
 
 document.getElementById("sociologia").addEventListener("click", () => {
   contentTitle.textContent = "Sociologia";
-  contentText.innerHTML = "<p></p>";
+  contentText.innerHTML = `
+  <div class="conteudo-aula">
+  <h2>Unidade 1</h2>
+  <p>Responder todos os exercícios</p>
+
+  </div>
+  `;
 });
 
 document.getElementById("ingles").addEventListener("click", () => {
@@ -227,6 +243,11 @@ document.getElementById("artes").addEventListener("click", () => {
             <img src="imagem_6.jpg" alt="Imagem da aula de arte">
             <img src="imagem_3.jpg" alt="Imagem da aula de arte">
             <img src="imagem_1.jpg" alt="Imagem da aula de arte">
+            
+            <hr> <!-- Linha para separar os trabalhos -->
+
+            <img src="ARTES RUIM.png"alt="Imagem da aula de arte">
+            <img src="rui.png"alt="Imagem da aula de arte">
             
 
         </div>
